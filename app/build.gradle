@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+
 }
 
 android {
@@ -57,10 +60,18 @@ dependencies {
     implementation "androidx.compose.ui:ui-tooling-preview"
     implementation 'androidx.compose.material3:material3'
 
+    //Navigation
     implementation 'androidx.navigation:navigation-runtime-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-compose:2.5.3'
+
     //Accompanist
     implementation 'com.google.accompanist:accompanist-navigation-animation:0.28.0'
+
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:31.3.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-auth-ktx'
 
     debugImplementation "androidx.compose.ui:ui-tooling"
     debugImplementation "androidx.compose.ui:ui-test-manifest"

@@ -18,30 +18,33 @@ import com.zanhsmitty.notes.ui.theme.NotesTheme
 @ExperimentalMaterial3Api
 @Composable
 fun LoginContent(
+    modifier: Modifier,
     formState: LoginFormState,
     onEvent: (LoginFormEvent) -> Unit,
 ) {
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Bottom,
     ){
         CustomTextField(
             modifier = Modifier.fillMaxWidth(),
             value = formState.email,
-            onValueChange = { LoginFormEvent.EmailChanged(it) },
+            onValueChange = { onEvent(LoginFormEvent.EmailChanged(it)) },
             label = "Email",
             error = formState.emailError
         )
         CustomTextField(
             modifier = Modifier.fillMaxWidth(),
             value = formState.password,
-            onValueChange = { LoginFormEvent.PasswordChanged(it) },
+            onValueChange = { onEvent(LoginFormEvent.PasswordChanged(it)) },
             label = "Password",
             error = formState.passwordError
         )
         Button(
             modifier = Modifier.fillMaxWidth(),
-            onClick = { onEvent(LoginFormEvent.LoginClicked) }
+            onClick = {
+                onEvent(LoginFormEvent.LoginClicked)
+            }
         ) {
             Text(text = "Login")
         }
@@ -54,6 +57,7 @@ fun LoginContent(
 fun LoginContentPreview() {
     NotesTheme {
         LoginContent(
+            modifier = Modifier,
             formState = LoginFormState(),
             onEvent = { }
         )

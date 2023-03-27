@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "562812128547",
+    "project_id": "notes-zanhsmitty",
+    "storage_bucket": "notes-zanhsmitty.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562812128547:android:800ada95673dc507251096",
+        "android_client_info": {
+          "package_name": "com.zanhsmitty.notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562812128547-vf47japk2t1h6b5s082dvn3kp50shoc5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3GXQ5aEL2c07CVkjuNmgy04GJGpSMq04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562812128547-vf47japk2t1h6b5s082dvn3kp50shoc5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

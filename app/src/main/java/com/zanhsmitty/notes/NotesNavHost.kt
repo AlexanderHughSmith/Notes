@@ -22,7 +22,10 @@ fun NotesNavHost(
        startDestination = Screen.Login.route
    ){
          loginComposable(
-              sharedViewModel = sharedViewModel
+              sharedViewModel = sharedViewModel,
+                navigateTo = { route ->
+                     navController.navigate(route)
+                }
          )
          noteListComposable(
               sharedViewModel = sharedViewModel

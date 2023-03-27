@@ -18,7 +18,9 @@ fun CustomTextField(
     OutlinedTextField(
         modifier = modifier,
         value = value,
-        onValueChange = { onValueChange(it)},
+        onValueChange = {
+            onValueChange(it)
+        },
         label = { Text(text = label) },
         supportingText = {
             if (error != null) {

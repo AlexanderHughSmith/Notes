@@ -8,5 +8,8 @@ import com.zanhsmitty.notes.ui.screens.SharedViewModel
 fun NoteListScreen(
     sharedViewModel: SharedViewModel
 ) {
-    NoteListContent(listOf(Note.tempList[0]))
+    NoteListContent(
+        email = sharedViewModel.currentUser.value?.email ?: "",
+        notes = listOf(Note.tempList[0])
+    )
 }
