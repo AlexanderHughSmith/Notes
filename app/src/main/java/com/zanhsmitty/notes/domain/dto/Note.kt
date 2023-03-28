@@ -1,9 +1,9 @@
 package com.zanhsmitty.notes.domain.dto
 
 data class Note(
-    val title: String,
-    val description: String,
-    val userId: String
+    val title: String = "",
+    val description: String = "",
+    val userId: String = ""
 ){
     companion object{
         val tempList = listOf(

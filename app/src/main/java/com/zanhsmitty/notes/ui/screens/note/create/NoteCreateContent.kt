@@ -18,10 +18,13 @@ import com.zanhsmitty.notes.useCases.note.NoteFormState
 @ExperimentalMaterial3Api
 @Composable
 fun NoteCreateContent(
+    modifier: Modifier,
     noteFormState: NoteFormState,
     onEvent: (NoteFormEvent) -> Unit,
 ) {
-    Column(){
+    Column(
+        modifier = modifier.fillMaxWidth()
+    ){
         CustomTextField(
             modifier = Modifier.fillMaxWidth(),
             value = noteFormState.title,
@@ -50,6 +53,6 @@ fun NoteCreateContent(
 @Composable
 fun NoteCreateContentPreview() {
     NotesTheme {
-        NoteCreateContent(NoteFormState(), { })
+        NoteCreateContent(Modifier,NoteFormState(), { })
     }
 }

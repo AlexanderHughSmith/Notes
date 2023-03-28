@@ -5,6 +5,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,10 +21,13 @@ import com.zanhsmitty.notes.ui.theme.NotesTheme
 
 @Composable
 fun NoteListContent(
+    modifier: Modifier,
     email: String,
     notes: List<Note>,
 ) {
-    Column(){
+    Column(
+        modifier = modifier
+    ){
         Text(
             modifier = Modifier
                 .fillMaxWidth()
@@ -41,8 +48,9 @@ fun NoteListContent(
 fun NoteListContentPreview() {
     NotesTheme {
         NoteListContent(
+            modifier = Modifier,
             email = "",
-            notes = Note.tempList
+            notes = Note.tempList,
         )
     }
 }

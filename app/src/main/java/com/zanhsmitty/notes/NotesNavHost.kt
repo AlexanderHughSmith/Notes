@@ -28,7 +28,10 @@ fun NotesNavHost(
                 }
          )
          noteListComposable(
-              sharedViewModel = sharedViewModel
+              sharedViewModel = sharedViewModel,
+                navigateTo = { route ->
+                     navController.navigate(route)
+                }
          )
          noteCreateComposable(
               sharedViewModel = sharedViewModel

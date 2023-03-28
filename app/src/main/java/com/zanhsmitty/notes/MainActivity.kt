@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import com.google.firebase.FirebaseApp
 import com.zanhsmitty.notes.ui.screens.SharedViewModel
 import com.zanhsmitty.notes.ui.theme.NotesTheme
 
@@ -24,6 +25,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val sharedViewModel: SharedViewModel by viewModels()
+        FirebaseApp.initializeApp(this)
         setContent {
             val navHost = rememberAnimatedNavController()
             NotesTheme {
